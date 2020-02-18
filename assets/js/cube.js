@@ -50,16 +50,16 @@ THREE.OrbitControls = function ( object, domElement, localElement ) {
 	this.maxDistance = Infinity;
 
 	// Set to true to disable this control
-	this.noRotate = true;
-	this.rotateSpeed = 1.0;
+	this.noRotate = false;
+	this.rotateSpeed = 0.01;
 
 	// Set to true to disable this control
 	this.noPan = false;
 	this.keyPanSpeed = 7.0;	// pixels moved per arrow key push
 
 	// Set to true to automatically rotate around the target
-	this.autoRotate = true;
-	this.autoRotateSpeed = 2; // 30 seconds per round when fps is 60
+	this.autoRotate = false;
+	this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
 
 	// How far you can orbit vertically, upper and lower limits.
 	// Range is 0 to Math.PI radians.
@@ -490,7 +490,7 @@ THREE.OrbitControls = function ( object, domElement, localElement ) {
 				break;
 
 			default:
-				state = STATE.NONE; 
+				state = STATE.NONE;
 
 		}
 	}
